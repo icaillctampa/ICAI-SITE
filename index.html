@@ -3,42 +3,117 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ICAI LLC – Multifamily Construction & Infrastructure | Tampa Bay</title>
+<title>ICAI LLC - Multifamily Construction & Infrastructure | Tampa Bay</title>
 <meta name="description" content="Licensed multifamily construction and infrastructure partner serving Tampa Bay. Interior, exterior, MEP, water intrusion, and capital improvement services for property managers, HOAs, and asset owners.">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;line-height:1.6;color:#1a1a1a;background:#fff}
 .container{max-width:1200px;margin:0 auto;padding:0 20px}
-header{background:#fff;border-bottom:1px solid #e5e5e5;position:sticky;top:0;z-index:100}
-nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
-.logo-tagline{font-size:11px;color:#666;letter-spacing:.5px}
-.nav-cta{display:flex;gap:15px;align-items:center}
-.phone{font-size:18px;font-weight:600;color:#1e40af;text-decoration:none}
-.btn-primary{background:#1e40af;color:#fff;padding:12px 24px;border-radius:4px;text-decoration:none;font-weight:600}
-.btn-secondary{background:#fff;color:#1e40af;padding:12px 24px;border:2px solid #1e40af;border-radius:4px;text-decoration:none;font-weight:600}
-.hero{background:linear-gradient(135deg,#1e40af,#3b82f6);color:#fff;padding:80px 20px;text-align:center}
-.hero h1{font-size:clamp(32px,5vw,48px);margin-bottom:20px}
-.hero-cta{display:flex;gap:15px;justify-content:center;flex-wrap:wrap}
-section{padding:80px 20px}
-h2{text-align:center;font-size:36px;margin-bottom:15px}
-.subtitle{text-align:center;color:#666;font-size:18px;margin-bottom:50px}
-.services-grid,.audience-grid,.why-grid{display:grid;gap:30px}
-.services-grid{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
-.audience-grid{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
-.why-grid{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
-.card{background:#fff;border:1px solid #e5e5e5;border-radius:8px;padding:30px}
-.card h3{color:#1e40af;margin-bottom:15px}
+
+/* Header */
+header{background:#fff;border-bottom:1px solid #e5e5e5;position:sticky;top:0;z-index:100;box-shadow:0 2px 4px rgba(0,0,0,0.05)}
+nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
+.logo{display:flex;align-items:center;gap:12px}
+.logo img{height:48px;width:auto;display:block}
+.logo-text{display:flex;flex-direction:column}
+.logo-tagline{font-size:10px;color:#666;letter-spacing:0.5px;line-height:1.3;text-transform:uppercase}
+.nav-cta{display:flex;gap:12px;align-items:center}
+.phone{font-size:17px;font-weight:600;color:#1e40af;text-decoration:none}
+.phone:hover{text-decoration:underline}
+
+/* Buttons */
+.btn-primary{background:#1e40af;color:#fff;padding:11px 22px;border-radius:6px;text-decoration:none;font-weight:600;transition:all 0.3s;display:inline-block}
+.btn-primary:hover{background:#1e3a8a;transform:translateY(-1px)}
+.btn-secondary{background:#fff;color:#1e40af;padding:11px 22px;border:2px solid #1e40af;border-radius:6px;text-decoration:none;font-weight:600;transition:all 0.3s;display:inline-block}
+.btn-secondary:hover{background:#f0f4ff}
+
+/* Hero */
+.hero{background:linear-gradient(135deg,#1e40af 0%,#3b82f6 100%);color:#fff;padding:70px 20px;text-align:center}
+.hero h1{font-size:clamp(28px,5vw,46px);font-weight:700;margin-bottom:18px;line-height:1.2}
+.hero-subtitle{font-size:19px;margin-bottom:14px;opacity:0.95}
+.hero-services{font-size:15px;opacity:0.9;margin-bottom:32px;max-width:800px;margin-left:auto;margin-right:auto}
+.hero-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+.hero .btn-primary{background:#fff;color:#1e40af;font-size:17px;padding:15px 30px}
+.hero .btn-secondary{background:transparent;color:#fff;border-color:#fff;font-size:17px;padding:15px 30px}
+.hero .btn-secondary:hover{background:rgba(255,255,255,0.1)}
+
+/* Service Area Badge */
+.service-area{background:#f8fafc;padding:18px;text-align:center;border-bottom:1px solid #e5e7eb}
+.service-area p{color:#475569;font-size:14px}
+.service-area strong{color:#1e40af}
+
+/* Sections */
+section{padding:70px 20px}
+h2{text-align:center;font-size:34px;font-weight:700;margin-bottom:12px;color:#1a1a1a}
+.subtitle{text-align:center;color:#666;font-size:17px;margin-bottom:45px;max-width:700px;margin-left:auto;margin-right:auto}
+
+/* Services Grid */
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:26px;margin-top:40px}
+.service-card{background:#fff;border:1px solid #e5e5e5;border-radius:8px;padding:28px;transition:box-shadow 0.3s}
+.service-card:hover{box-shadow:0 4px 12px rgba(0,0,0,0.08)}
+.service-card h3{font-size:20px;font-weight:700;color:#1e40af;margin-bottom:12px}
+.service-card ul{list-style:none;color:#4b5563;font-size:15px}
+.service-card ul li{padding:5px 0;padding-left:18px;position:relative}
+.service-card ul li:before{content:"•";position:absolute;left:0;color:#1e40af;font-weight:bold}
+.service-card p{color:#4b5563;line-height:1.6}
+
+/* Audience Grid */
+.audience-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:40px}
+.audience-card{background:#f8fafc;padding:22px;border-radius:8px;border-left:4px solid #1e40af}
+.audience-card h3{font-size:17px;font-weight:700;color:#1a1a1a;margin-bottom:6px}
+.audience-card p{color:#666;font-size:14px}
+
+/* Why Grid */
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:26px;margin-top:40px}
+.why-card{text-align:center;padding:28px 18px}
+.why-icon{width:56px;height:56px;background:#eff6ff;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-size:26px}
+.why-card h3{font-size:19px;font-weight:700;margin-bottom:10px;color:#1a1a1a}
+.why-card p{color:#666;font-size:14px;line-height:1.6}
+
+/* Credentials */
 .credentials{background:#f8fafc}
-.credentials-list{display:flex;flex-wrap:wrap;justify-content:center;gap:30px}
-.credential{background:#fff;padding:20px 30px;border-radius:8px;border:1px solid #e5e5e5;font-weight:600;color:#1e40af}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px}
+.credentials-list{display:flex;flex-wrap:wrap;justify-content:center;gap:26px;margin-top:28px}
+.credential-badge{background:#fff;padding:18px 28px;border-radius:8px;border:1px solid #e5e5e5;font-weight:600;color:#1e40af;font-size:15px}
+
+/* Contact */
+.contact{background:#fff}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;margin-top:40px}
 @media(max-width:768px){.contact-grid{grid-template-columns:1fr}}
-form{background:#f8fafc;padding:30px;border-radius:8px}
-label{font-weight:600;margin-bottom:6px;display:block}
-input,select,textarea{width:100%;padding:12px;margin-bottom:16px;border:1px solid #d1d5db;border-radius:4px}
-button{background:#1e40af;color:#fff;padding:14px;border:none;border-radius:4px;font-size:16px;font-weight:600;width:100%;cursor:pointer}
-footer{background:#1a1a1a;color:#9ca3af;padding:40px 20px;text-align:center}
+
+.contact-info h3{font-size:22px;margin-bottom:22px;color:#1a1a1a}
+.contact-item{margin-bottom:22px}
+.contact-item label{display:block;font-weight:600;color:#1a1a1a;margin-bottom:6px;font-size:13px;text-transform:uppercase;letter-spacing:0.5px}
+.contact-item a{color:#1e40af;text-decoration:none;font-size:17px;font-weight:600}
+.contact-item a:hover{text-decoration:underline}
+.contact-item p{color:#4b5563;font-size:15px}
+
+/* Form */
+form{background:#f8fafc;padding:28px;border-radius:8px}
+form h3{margin-bottom:18px;font-size:20px}
+.form-group{margin-bottom:18px}
+label{display:block;margin-bottom:7px;font-weight:600;color:#1a1a1a;font-size:14px}
+input,textarea,select{width:100%;padding:11px;border:1px solid #d1d5db;border-radius:4px;font-size:15px;font-family:inherit}
+textarea{min-height:110px;resize:vertical}
+button[type="submit"]{background:#1e40af;color:#fff;padding:13px 30px;border:none;border-radius:4px;font-size:16px;font-weight:600;cursor:pointer;transition:background 0.3s;width:100%}
+button[type="submit"]:hover{background:#1e3a8a}
+
+/* Footer */
+footer{background:#1a1a1a;color:#9ca3af;padding:38px 20px;text-align:center}
+footer .footer-logo{height:54px;width:auto;display:block;margin:0 auto 16px;opacity:0.4}
+footer p{margin-bottom:8px;font-size:14px}
+footer a{color:#9ca3af;text-decoration:none}
+footer a:hover{color:#fff}
+
+/* Mobile Responsive */
+@media(max-width:768px){
+  nav{flex-direction:column;gap:14px;padding:14px 0}
+  .nav-cta{flex-direction:column;width:100%}
+  .nav-cta a{width:100%;text-align:center}
+  .phone{font-size:16px}
+  .logo img{height:42px}
+  .logo-tagline{font-size:9px}
+}
 </style>
 </head>
 
@@ -46,18 +121,25 @@ footer{background:#1a1a1a;color:#9ca3af;padding:40px 20px;text-align:center}
 
 <header>
 <nav class="container">
-<div class="logo-tagline">INTEGRITY CONSTRUCTION ADVISORY & INFRASTRUCTURE</div>
-<div class="nav-cta">
-<a href="tel:+18136990064" class="phone">813-699-0064</a>
-<a href="#contact" class="btn-primary">Request Service</a>
-</div>
+  <div class="logo">
+    <img src="/icai-logo.png" alt="ICAI LLC Logo">
+    <div class="logo-text">
+      <div class="logo-tagline">Integrity Construction Advisory & Infrastructure</div>
+    </div>
+  </div>
+  <div class="nav-cta">
+    <a href="tel:+18136990064" class="phone">📞 (813) 699-0064</a>
+    <a href="#contact" class="btn-primary">Request Service</a>
+  </div>
 </nav>
 </header>
 
+<!-- Hero -->
 <section class="hero">
 <div class="container">
 <h1>Full-Service Multifamily Construction & Infrastructure Partner</h1>
-<p>Single-vendor solution for property managers across Tampa Bay</p>
+<p class="hero-subtitle">Single-vendor solution for property managers across Tampa Bay</p>
+<p class="hero-services">Interior Renovations • Exterior Renovations • MEP Services • Water Intrusion & Restoration • Painting • Consulting</p>
 <div class="hero-cta">
 <a href="#contact" class="btn-primary">Request Service</a>
 <a href="tel:+18136990064" class="btn-secondary">Call Now</a>
@@ -65,114 +147,274 @@ footer{background:#1a1a1a;color:#9ca3af;padding:40px 20px;text-align:center}
 </div>
 </section>
 
-<section>
+<!-- Service Area -->
+<div class="service-area">
+<div class="container">
+<p><strong>Service Area:</strong> Tampa • St. Petersburg • Clearwater • Brandon • Largo • Surrounding Tampa Bay Markets</p>
+</div>
+</div>
+
+<!-- Services -->
+<section id="services">
 <div class="container">
 <h2>Comprehensive Multifamily Services</h2>
-<p class="subtitle">All trades. One accountable partner.</p>
+<p class="subtitle">Full-scope construction and infrastructure services under one professionally managed operation</p>
 
 <div class="services-grid">
-<div class="card"><h3>Interior Renovations</h3><p>Unit turns, flooring, cabinets, drywall, paint, lighting, ADA upgrades</p></div>
-<div class="card"><h3>Exterior Renovations</h3><p>Balconies, stairs, concrete, siding, trip hazards, exterior lighting</p></div>
-<div class="card"><h3>MEP Services</h3><p>HVAC, electrical panels, plumbing repairs, water heaters</p></div>
-<div class="card"><h3>Water Intrusion & Restoration</h3><p>24/7 extraction, dry-outs, mold remediation, reconstruction</p></div>
-<div class="card"><h3>Painting</h3><p>Interior turns, exterior repainting, elastomeric coatings</p></div>
-<div class="card"><h3>Consulting & Inspections</h3><p>PCAs, capital planning, compliance reviews, procurement</p></div>
+<div class="service-card">
+<h3>Interior Renovations</h3>
+<ul>
+<li>Unit turns</li>
+<li>Flooring, cabinetry, countertops</li>
+<li>Drywall, texture, painting</li>
+<li>Lighting upgrades</li>
+<li>ADA improvements</li>
+</ul>
+</div>
+
+<div class="service-card">
+<h3>Exterior Renovations</h3>
+<ul>
+<li>Siding, stucco, wood rot repair</li>
+<li>Decks, balconies, stairs, railings</li>
+<li>Concrete repairs & sidewalks</li>
+<li>Trip hazard remediation</li>
+<li>Exterior lighting</li>
+<li>Pressure washing</li>
+</ul>
+</div>
+
+<div class="service-card">
+<h3>MEP Services</h3>
+<ul>
+<li><strong>Mechanical:</strong> HVAC changeouts, mini-splits, duct repairs</li>
+<li><strong>Electrical:</strong> Panels, breakers, GFCI/AFCI, site lighting</li>
+<li><strong>Plumbing:</strong> Leaks, drains, fixtures, water heaters</li>
+</ul>
+</div>
+
+<div class="service-card">
+<h3>Water Intrusion & Restoration</h3>
+<ul>
+<li>24/7 water extraction</li>
+<li>Dry-outs & moisture mapping</li>
+<li>Thermal imaging</li>
+<li>Mold remediation</li>
+<li>Reconstruction</li>
+<li>Building envelope diagnostics</li>
+</ul>
+</div>
+
+<div class="service-card">
+<h3>Painting Services</h3>
+<ul>
+<li>Interior unit turns</li>
+<li>Common area painting</li>
+<li>Exterior repainting</li>
+<li>Elastomeric waterproofing</li>
+<li>Metal railing refinishing</li>
+</ul>
+</div>
+
+<div class="service-card">
+<h3>Professional Consulting, Inspections & Procurement</h3>
+<ul>
+<li>Property condition assessments</li>
+<li>Capital needs analysis</li>
+<li>Code compliance reviews</li>
+<li>Vendor qualification & oversight</li>
+<li>Material procurement & logistics</li>
+<li>Project feasibility studies</li>
+</ul>
+</div>
 </div>
 </div>
 </section>
 
-<section style="background:#f8fafc">
+<!-- Who We Serve -->
+<section id="who-we-serve" style="background:#f8fafc">
 <div class="container">
 <h2>Who We Serve</h2>
+<p class="subtitle">Trusted by property professionals managing multifamily communities across Tampa Bay</p>
+
 <div class="audience-grid">
-<div class="card">Property Managers</div>
-<div class="card">HOAs & COAs</div>
-<div class="card">Regional Managers</div>
-<div class="card">Asset Managers</div>
-<div class="card">REITs & Ownership Groups</div>
-<div class="card">Maintenance Teams</div>
+<div class="audience-card">
+<h3>Property Managers</h3>
+<p>Single point of contact for all maintenance and renovation needs</p>
+</div>
+<div class="audience-card">
+<h3>HOAs & COAs</h3>
+<p>Code-compliant execution with transparent documentation</p>
+</div>
+<div class="audience-card">
+<h3>Regional Managers</h3>
+<p>Consistent service delivery across multiple properties</p>
+</div>
+<div class="audience-card">
+<h3>Asset Managers</h3>
+<p>Budget-aligned CapEx and OpEx solutions</p>
+</div>
+<div class="audience-card">
+<h3>REITs & Ownership Groups</h3>
+<p>Institutional-grade reporting and compliance</p>
+</div>
+<div class="audience-card">
+<h3>Maintenance Teams</h3>
+<p>Reliable partner for specialized trade work</p>
+</div>
 </div>
 </div>
 </section>
 
-<section>
+<!-- Why ICAI -->
+<section id="why-icai">
 <div class="container">
 <h2>Why ICAI</h2>
+<p class="subtitle">Single point of accountability for multifamily construction and infrastructure</p>
+
 <div class="why-grid">
-<div class="card">Multifamily-exclusive focus</div>
-<div class="card">All trades under one contract</div>
-<div class="card">24/7 emergency response</div>
-<div class="card">Documented execution</div>
-<div class="card">Code-compliant & insured</div>
-<div class="card">Budget-aligned delivery</div>
+<div class="why-card">
+<div class="why-icon">🏢</div>
+<h3>Multifamily-Exclusive Focus</h3>
+<p>We understand the unique demands of property management and multifamily operations</p>
+</div>
+<div class="why-card">
+<div class="why-icon">🔧</div>
+<h3>Full Trade Coverage</h3>
+<p>One vendor for interior, exterior, MEP, water intrusion, and painting—no coordination required</p>
+</div>
+<div class="why-card">
+<div class="why-icon">⚡</div>
+<h3>Rapid Response</h3>
+<p>24/7 emergency availability for water intrusion and critical infrastructure failures</p>
+</div>
+<div class="why-card">
+<div class="why-icon">📋</div>
+<h3>Documented Execution</h3>
+<p>Photo logs, detailed scopes, and transparent reporting on every project</p>
+</div>
+<div class="why-card">
+<div class="why-icon">✅</div>
+<h3>Code-Compliant</h3>
+<p>Licensed, insured, and safety-certified for institutional requirements</p>
+</div>
+<div class="why-card">
+<div class="why-icon">💰</div>
+<h3>Budget Alignment</h3>
+<p>Transparent pricing and scope management for CapEx and OpEx planning</p>
+</div>
 </div>
 </div>
 </section>
 
+<!-- Credentials -->
 <section class="credentials">
 <div class="container">
 <h2>Licensed & Insured</h2>
+<p class="subtitle">Fully compliant with institutional vendor requirements</p>
+
 <div class="credentials-list">
-<div class="credential">Florida Licensed</div>
-<div class="credential">General Liability</div>
-<div class="credential">Workers Comp</div>
-<div class="credential">EPA Certified</div>
-<div class="credential">OSHA Compliant</div>
+<div class="credential-badge">✓ Florida Licensed</div>
+<div class="credential-badge">✓ General Liability Insured</div>
+<div class="credential-badge">✓ Workers' Compensation</div>
+<div class="credential-badge">✓ EPA Certified (Lead & Mold)</div>
+<div class="credential-badge">✓ OSHA Compliant</div>
 </div>
 </div>
 </section>
 
-<section id="contact">
+<!-- Contact -->
+<section id="contact" class="contact">
 <div class="container">
 <h2>Request Service</h2>
+<p class="subtitle">Get in touch for immediate assistance or vendor registration</p>
 
 <div class="contact-grid">
-<div>
-<p><strong>Phone:</strong> <a href="tel:+18136990064">813-699-0064</a></p>
-<p><strong>Email:</strong> <a href="mailto:ICAILLCTAMPA@GMAIL.COM">ICAILLCTAMPA@GMAIL.COM</a></p>
-<p>24/7 Emergency Water Intrusion Response</p>
+<div class="contact-info">
+<h3>Contact Information</h3>
+
+<div class="contact-item">
+<label>Phone</label>
+<a href="tel:+18136990064">(813) 699-0064</a>
+</div>
+
+<div class="contact-item">
+<label>Email</label>
+<a href="mailto:icaillctampa@gmail.com">icaillctampa@gmail.com</a>
+</div>
+
+<div class="contact-item">
+<label>Emergency Service</label>
+<p>24/7 Water Intrusion & Critical Failures</p>
+<a href="tel:+18136990064">(813) 699-0064</a>
+</div>
+
+<div class="contact-item">
+<label>Service Area</label>
+<p>Tampa Bay: Tampa, St. Petersburg, Clearwater, Brandon, Largo, and surrounding markets</p>
+</div>
 </div>
 
 <form name="service-request" method="POST" data-netlify="true" netlify-honeypot="bot-field">
 <input type="hidden" name="form-name" value="service-request">
 <input type="hidden" name="bot-field">
 
-<label>Name *</label>
-<input name="name" required>
+<h3>Service Request Form</h3>
 
-<label>Property / Company *</label>
-<input name="company" required>
+<div class="form-group">
+<label for="name">Name *</label>
+<input type="text" id="name" name="name" required>
+</div>
 
-<label>Email *</label>
-<input type="email" name="email" required>
+<div class="form-group">
+<label for="company">Property / Company *</label>
+<input type="text" id="company" name="company" required>
+</div>
 
-<label>Phone *</label>
-<input name="phone" required>
+<div class="form-group">
+<label for="email">Email *</label>
+<input type="email" id="email" name="email" required>
+</div>
 
-<label>Service Needed *</label>
-<select name="service" required>
-<option value="">Select</option>
-<option>Interior Renovations</option>
-<option>Exterior Renovations</option>
-<option>MEP Services</option>
-<option>Water Intrusion / Restoration</option>
-<option>Emergency Service</option>
+<div class="form-group">
+<label for="phone">Phone *</label>
+<input type="tel" id="phone" name="phone" required>
+</div>
+
+<div class="form-group">
+<label for="service">Service Needed *</label>
+<select id="service" name="service" required>
+<option value="">Select a service</option>
+<option value="interior">Interior Renovations</option>
+<option value="exterior">Exterior Renovations</option>
+<option value="mep">MEP Services</option>
+<option value="water">Water Intrusion / Restoration</option>
+<option value="painting">Painting Services</option>
+<option value="consulting">Consulting & Inspections</option>
+<option value="emergency">Emergency Service</option>
+<option value="vendor">Vendor Registration</option>
 </select>
+</div>
 
-<label>Project Details</label>
-<textarea name="message"></textarea>
+<div class="form-group">
+<label for="message">Project Details</label>
+<textarea id="message" name="message" placeholder="Describe your project or service needs..."></textarea>
+</div>
 
 <button type="submit">Submit Request</button>
 </form>
-
 </div>
 </div>
 </section>
 
+<!-- Footer -->
 <footer>
+<div class="container">
+<img src="/icai-logo.png" alt="ICAI LLC Logo" class="footer-logo">
 <p><strong>ICAI LLC</strong> | Integrity Construction Advisory & Infrastructure</p>
-<p>Tampa Bay, Florida</p>
-<p>© 2026 ICAI LLC</p>
+<p>Licensed & Insured Multifamily Construction Partner | Tampa Bay, Florida</p>
+<p style="margin-top:18px;">© 2026 ICAI LLC. All rights reserved.</p>
+</div>
 </footer>
 
 </body>
