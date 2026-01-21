@@ -155,19 +155,21 @@ footer{background:#1a1a1a;color:#9ca3af;padding:38px 20px;text-align:center}
 <input type="email" name="email" required>
 
 <label>Phone *</label>
-<input name="phone" required>
+<input type="tel" name="phone" required>
+
 
 <label>Service Needed *</label>
 <select name="service" required>
-<option value="">Select</option>
-<option>Interior Renovations</option>
-<option>Exterior Renovations</option>
-<option value="mechanical">Mechanical (HVAC)</option>
-<option value="electrical">Electrical</option>
-<option value="plumbing">Plumbing</option>
-<option>Water Intrusion / Restoration</option>
-<option>Emergency Service</option>
+  <option value="">Select</option>
+  <option value="interior">Interior Renovations</option>
+  <option value="exterior">Exterior Renovations</option>
+  <option value="mechanical">Mechanical (HVAC)</option>
+  <option value="electrical">Electrical</option>
+  <option value="plumbing">Plumbing</option>
+  <option value="water">Water Intrusion / Restoration</option>
+  <option value="emergency">Emergency Service</option>
 </select>
+
 
 <label>Project Details</label>
 <textarea name="message"></textarea>
