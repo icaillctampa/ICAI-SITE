@@ -1,20 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ICAI LLC | Multifamily Construction & Infrastructure Tampa Bay</title>
-    <meta name="description" content="Licensed multifamily construction and infrastructure partner serving Tampa Bay. Experts in MEP, water intrusion, and capital improvements.">
-    
-    <!-- Added: Resource Prioritization -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    
+",
+      "@type": "GeneralContractor",
+      "name": "ICAI LLC",
+      "image": "https://yourdomain.com",
+      "url": "https://yourdomain.com",
+      "telephone": "+18136990064",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Tampa",
+        "addressRegion": "FL",
+        "addressCountry": "US"
+      },
+      "areaServed": "Tampa Bay",
+      "description": "Multifamily construction and infrastructure partner for property managers and asset owners."
+    }
+    </script>
+
     <style>
         :root {
             --primary: #1e40af;
             --primary-dark: #1e3a8a;
-            --text-dark: #1a1a1a;
-            --text-light: #666;
+            --text-dark: #111827;
+            --text-light: #4b5563;
             --bg-light: #f8fafc;
             --transition: 0.3s ease;
         }
@@ -29,7 +35,7 @@
 
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-        /* Improved Header with Mobile Considerations */
+        /* --- Header & Navigation --- */
         header { 
             background: #fff; 
             border-bottom: 1px solid #e5e5e5; 
@@ -37,70 +43,103 @@
             top: 0; 
             z-index: 1000; 
             box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
+            padding: 12px 0;
         }
+
         nav { 
             display: flex; 
             justify-content: space-between; 
             align-items: center; 
-            padding: 12px 0; 
         }
-        .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-        .logo img { height: 60px; width: auto; }
-        .logo-tagline { font-size: 11px; color: var(--text-light); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
 
-        .nav-cta { display: flex; gap: 20px; align-items: center; }
-        .phone-link { font-weight: 700; color: var(--primary); text-decoration: none; }
+        .logo { 
+            display: flex; 
+            align-items: center; 
+            gap: 16px; 
+            text-decoration: none; 
+        }
 
-        /* Buttons */
+        /* Large Desktop Logo */
+        .logo img { 
+            height: 100px; 
+            width: auto; 
+            display: block;
+        }
+
+        .logo-text { display: flex; flex-direction: column; }
+        .logo-tagline { 
+            font-size: 13px; 
+            color: var(--text-light); 
+            font-weight: 700; 
+            text-transform: uppercase; 
+            letter-spacing: 0.5px;
+            max-width: 220px;
+            line-height: 1.3;
+        }
+
+        .nav-cta { display: flex; gap: 24px; align-items: center; }
+        .phone-link { font-weight: 700; color: var(--primary); text-decoration: none; font-size: 18px; }
+
+        /* Mobile Header Logic (Logo Centering) */
+        @media (max-width: 768px) {
+            nav { flex-direction: column; gap: 15px; }
+            .logo { flex-direction: column; text-align: center; gap: 8px; }
+            .logo img { height: 80px; }
+            .logo-tagline { font-size: 11px; max-width: 100%; }
+            .nav-cta { width: 100%; justify-content: center; }
+            .phone-link { display: none; } /* Hide phone text to keep mobile tidy */
+        }
+
+        /* --- UI Components --- */
         .btn { 
-            padding: 12px 24px; 
+            padding: 12px 28px; 
             border-radius: 6px; 
             font-weight: 600; 
             text-decoration: none; 
             transition: var(--transition); 
             display: inline-block; 
-            text-align: center;
         }
         .btn-primary { background: var(--primary); color: #fff; border: 2px solid var(--primary); }
-        .btn-primary:hover { background: var(--primary-dark); }
+        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); }
         .btn-outline { background: transparent; color: #fff; border: 2px solid #fff; }
         .btn-outline:hover { background: #fff; color: var(--primary); }
 
-        /* Hero */
+        /* Hero Section */
         .hero { 
-            background: linear-gradient(135deg, #111827 0%, #1e40af 100%); 
+            background: linear-gradient(135deg, #0f172a 0%, #1e40af 100%); 
             color: #fff; 
-            padding: 100px 20px; 
+            padding: 120px 20px; 
             text-align: center; 
         }
-        .hero h1 { font-size: clamp(32px, 6vw, 52px); line-height: 1.1; margin-bottom: 20px; }
-        .hero p { font-size: 20px; opacity: 0.9; margin-bottom: 30px; }
+        .hero h1 { font-size: clamp(34px, 6vw, 56px); line-height: 1.1; margin-bottom: 24px; font-weight: 800; }
+        .hero p { font-size: clamp(18px, 3vw, 22px); opacity: 0.9; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto; }
 
-        /* Grid Layouts */
-        .grid { display: grid; gap: 30px; margin-top: 40px; }
+        /* Services Grid */
+        .grid { display: grid; gap: 30px; margin-top: 50px; }
         .grid-3 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
         
         .card { 
-            padding: 30px; 
+            padding: 40px; 
             background: #fff; 
-            border: 1px solid #eee; 
+            border: 1px solid #e5e7eb; 
             border-radius: 12px; 
             transition: var(--transition); 
         }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-        .card h3 { color: var(--primary); margin-bottom: 10px; }
+        .card:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
+        .card h3 { color: var(--primary); margin-bottom: 12px; font-size: 22px; }
 
         /* Form Styling */
-        .contact-wrapper { display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; padding: 80px 0; }
-        .form-group { margin-bottom: 16px; }
-        label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+        .contact-section { background: var(--bg-light); padding: 100px 0; }
+        .contact-wrapper { display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; }
+        .form-group { margin-bottom: 20px; }
+        label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 8px; color: var(--text-dark); }
         input, select, textarea { 
-            width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 16px; 
+            width: 100%; padding: 14px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 16px; transition: border 0.2s;
         }
+        input:focus { outline: none; border-color: var(--primary); }
         
-        @media (max-width: 768px) {
+        @media (max-width: 900px) {
             .contact-wrapper { grid-template-columns: 1fr; }
-            .nav-cta .phone-link { display: none; } /* Hide phone on tiny screens to save space */
         }
     </style>
 </head>
@@ -109,14 +148,15 @@
 <header>
     <nav class="container">
         <a href="/" class="logo">
-            <img src="/icai-logo.png" alt="ICAI LLC Logo" width="180" height="60">
+            <!-- Large Logo: Width/Height set for desktop clarity -->
+            <img src="/icai-logo.png" alt="ICAI LLC Logo" width="300" height="100" onerror="this.style.display='none'">
             <div class="logo-text">
-                <span class="logo-tagline">Integrity Construction Advisory</span>
+                <span class="logo-tagline">Integrity Construction Advisory & Infrastructure</span>
             </div>
         </a>
         <div class="nav-cta">
             <a href="tel:+18136990064" class="phone-link">(813) 699-0064</a>
-            <a href="#contact" class="btn btn-primary">Get a Quote</a>
+            <a href="#contact" class="btn btn-primary">Request Service</a>
         </div>
     </nav>
 </header>
@@ -124,74 +164,84 @@
 <main>
     <section class="hero">
         <div class="container">
-            <h1>Multifamily Construction & Infrastructure Experts</h1>
-            <p>The single-vendor solution for Tampa Bay property managers.</p>
-            <div style="display:flex; gap:15px; justify-content:center;">
-                <a href="#contact" class="btn btn-primary">Request Service</a>
-                <a href="#services" class="btn btn-outline">Our Services</a>
+            <h1>Expert Multifamily Construction & Infrastructure</h1>
+            <p>Providing the single-vendor advantage for property managers and HOAs across Tampa Bay.</p>
+            <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+                <a href="#contact" class="btn btn-primary">Get a Free Estimate</a>
+                <a href="#services" class="btn btn-outline">Our Capabilities</a>
             </div>
         </div>
     </section>
 
-    <section id="services" class="container" style="padding: 80px 20px;">
-        <h2 style="text-align:center; font-size: 36px;">Core Capabilities</h2>
+    <section id="services" class="container" style="padding: 100px 20px;">
+        <div style="text-align:center; max-width: 700px; margin: 0 auto;">
+            <h2 style="font-size: 38px; margin-bottom: 16px;">Comprehensive Solutions</h2>
+            <p style="color: var(--text-light);">We handle everything from minor unit turns to major capital improvements and MEP infrastructure.</p>
+        </div>
         <div class="grid grid-3">
             <div class="card">
-                <h3>Interior Turns</h3>
-                <p>Flooring, cabinetry, and ADA upgrades delivered on tight schedules.</p>
+                <h3>Interior Excellence</h3>
+                <p>Efficient unit turns, cabinetry, high-end flooring, and specialized ADA upgrades.</p>
             </div>
             <div class="card">
-                <h3>MEP & Infrastructure</h3>
-                <p>Full-service Mechanical, Electrical, and Plumbing for large-scale assets.</p>
+                <h3>MEP Infrastructure</h3>
+                <p>Expert Mechanical, Electrical, and Plumbing services tailored for commercial assets.</p>
             </div>
             <div class="card">
-                <h3>Water Intrusion</h3>
-                <p>24/7 emergency response and long-term remediation strategies.</p>
+                <h3>Water & Restoration</h3>
+                <p>24/7 rapid response for water intrusion, dry-outs, and mold remediation.</p>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="bg-light">
+    <section id="contact" class="contact-section">
         <div class="container contact-wrapper">
             <div>
-                <h2>Ready to Start?</h2>
-                <p style="margin: 20px 0;">Contact us for capital improvement planning or emergency repairs.</p>
-                <p><strong>Email:</strong> <a href="mailto:ICAILLCTAMPA@GMAIL.COM">ICAILLCTAMPA@GMAIL.COM</a></p>
-                <p><strong>Location:</strong> serving the greater Tampa Bay area.</p>
+                <h2 style="font-size: 34px; margin-bottom: 20px;">Contact Our Team</h2>
+                <p style="margin-bottom: 30px; font-size: 18px;">Serving Hillsborough, Pinellas, and Pasco counties. Reach out today for priority service.</p>
+                <p><strong>Email:</strong> <a href="mailto:ICAILLCTAMPA@GMAIL.COM" style="color:var(--primary);">ICAILLCTAMPA@GMAIL.COM</a></p>
+                <p style="margin-top:10px;"><strong>Phone:</strong> (813) 699-0064</p>
+                <p style="margin-top:10px;"><strong>Hours:</strong> 24/7 Emergency Support Available</p>
             </div>
             
-            <form action="#" method="POST" class="card">
+            <!-- Accessible Form -->
+            <form action="#" method="POST" class="card" style="box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
                 <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" required placeholder="John Doe">
+                    <label for="full-name">Name</label>
+                    <input type="text" id="full-name" name="name" required placeholder="Full Name">
                 </div>
                 <div class="form-group">
-                    <label for="email">Work Email</label>
-                    <input type="email" id="email" name="email" required>
+                    <label for="prop-name">Property / Company</label>
+                    <input type="text" id="prop-name" name="property" required>
                 </div>
                 <div class="form-group">
-                    <label for="service">Service Type</label>
-                    <select id="service" name="service">
+                    <label for="email-addr">Email Address</label>
+                    <input type="email" id="email-addr" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="svc-type">Service Required</label>
+                    <select id="svc-type" name="service">
                         <option>Interior Renovation</option>
-                        <option>MEP Service</option>
-                        <option>Water Intrusion</option>
-                        <option>Other</option>
+                        <option>MEP / Infrastructure</option>
+                        <option>Water Intrusion Response</option>
+                        <option>Capital Improvements</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="msg">Project Details</label>
-                    <textarea id="msg" name="message" rows="4"></textarea>
+                    <label for="project-msg">Brief Message</label>
+                    <textarea id="project-msg" name="message" rows="3"></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary" style="width:100%; border:none; cursor:pointer;">Send Request</button>
+                <button type="submit" class="btn btn-primary" style="width:100%; border:none; cursor:pointer; font-size:17px;">Submit Service Request</button>
             </form>
         </div>
     </section>
 </main>
 
-<footer style="background:#111827; color:#fff; padding: 60px 0; text-align:center;">
+<footer style="background:#0f172a; color:#94a3b8; padding: 80px 0; text-align:center;">
     <div class="container">
-        <p>&copy; 2026 ICAI LLC. All Rights Reserved.</p>
-        <p style="font-size:12px; opacity:0.6; margin-top:10px;">Licensed & Insured Florida Contractor</p>
+        <p style="color: #fff; font-weight: 700; margin-bottom: 10px;">ICAI LLC</p>
+        <p>&copy; 2026 Integrity Construction Advisory & Infrastructure. All Rights Reserved.</p>
+        <p style="font-size:13px; margin-top: 15px;">Florida Licensed, Insured, and Bonded Contractor</p>
     </div>
 </footer>
 
